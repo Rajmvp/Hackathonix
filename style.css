@@ -1,0 +1,104 @@
+zz
+/* navabar */
+
+ #brandimg {
+border-radius: 40%;
+  }
+
+  nav {
+    padding: 0, 0.5rem;
+  }
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  background-image: linear-gradient(to right, #3d14c5, #54b3d6 50%, #075c1f 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  transition: background-position 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  background-position: 0;
+}
+
+.nav-link::before {
+  content: '';
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+/* Active link styling */
+.active-link {
+  background-position: 0; 
+}
+
+.active-link::before {
+  width: 0;
+  background-color: #54b3d6; 
+}
+
+/* main */
+
+
+ #carouselExampleAutoplaying{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+ 
+ .gallery-img {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        cursor: pointer;
+        border-radius: 4%;
+}
+
+ .gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+ .gallery-grid-item{
+  border: solid  #4CBB17 4px;
+  border-radius: 5%;
+
+  
+}
+ 
+/* footer */
+
+.hr{
+  border:solid #009E60 3px ;
+}
+
+
+/* Header */
+    
+ h1,h2,h3,h4,h5,h5,h6,p{
+      font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
+    }
+ h5,h6{
+      color:#228B22 ;
+    }
+ p,a{
+      color:#097969; 
+    }
+ .license{
+      color:#097969;
+    }
+ h1,h2,h3{
+      color:#4CBB17 ;
+    }
+
+    

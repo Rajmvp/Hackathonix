@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Book</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 20px;
+            color: #333;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #2e7d32; /* Green for the heading */
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #2e7d32; /* Green for the labels */
+        }
+        input[type="text"], 
+        input[type="number"], 
+        input[type="date"], 
+        input[type="file"], 
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus, 
+        input[type="number"]:focus, 
+        input[type="date"]:focus, 
+        textarea:focus {
+            border-color: #2e7d32; /* Green focus border */
+        }
+        input[type="submit"] {
+            width: 100%;
+            margin-top: 20px;
+            background-color: #2e7d32; /* Green button */
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #1e5b22; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+
+<h2>Upload a New Book</h2>
+
+<form action="../upload.php" method="post" enctype="multipart/form-data">
+    <label for="title">Title:</label>
+    <input type="text" name="title" id="title" required>
+
+    <label for="author">Author:</label>
+    <input type="text" name="author" id="author" required>
+
+    <label for="isbn">ISBN:</label>
+    <input type="text" name="isbn" id="isbn" required>
+
+    <label for="genre">Genre:</label>
+    <input type="text" name="genre" id="genre" required>
+
+    <label for="pub_date">Publication Date:</label>
+    <input type="date" name="pub_date" id="pub_date" required>
+
+    <label for="publisher">Publisher:</label>
+    <input type="text" name="publisher" id="publisher">
+
+    <label for="pages">Number of Pages:</label>
+    <input type="number" name="pages" id="pages">
+
+    <label for="language">Language:</label>
+    <input type="text" name="language" id="language">
+
+    <label for="edition">Edition:</label>
+    <input type="text" name="edition" id="edition">
+
+    <label for="price">Price:</label>
+    <input type="number" step="0.01" name="price" id="price">
+
+    <label for="description">Description:</label>
+    <textarea name="description" id="description" rows="4"></textarea>
+
+    <label for="pdf_file">Upload PDF:</label>
+    <input type="file" name="pdf_file" id="pdf_file" accept=".pdf" required>
+
+    <label for="cover_image">Upload Cover Image:</label>
+    <input type="file" name="cover_image" id="cover_image" accept="image/*">
+
+    <input type="submit" value="Upload Book">
+</form>
+<!-- Button to go to the dashboard -->
+<div class="d-flex justify-content-center mt-4">
+    <a href="dashboard.php" class="btn btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 3.293l6 6V14.5a.5.5 0 0 1-.5.5H10.5a.5.5 0 0 1-.5-.5v-4H6v4a.5.5 0 0 1-.5.5H2.5a.5.5 0 0 1-.5-.5V9.293l6-6zm0-1.414L1.5 7.293v7.207A1.5 1.5 0 0 0 3 16h4a1.5 1.5 0 0 0 1.5-1.5v-4h2v4A1.5 1.5 0 0 0 13 16h2A1.5 1.5 0 0 0 16 14.5V7.293l-6.5-6.414a1.5 1.5 0 0 0-2.035-.06z"/>
+        </svg>
+        Go to Dashboard
+    </a>
+</div>
+
+</body>
+</html>

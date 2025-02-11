@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Digital Books</title>
+  <style>
+    /* Basic styling for FAQ */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .faq-section {
+      margin: 20px 0;
+    }
+    .faq-question {
+      cursor: pointer;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      margin-bottom: 5px;
+      border-radius: 5px;
+    }
+    .faq-question:hover {
+      background-color: #e8f5e9;
+    }
+
+    /* Modal Styling */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      width: 80%;
+      max-width: 600px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Frequently Asked Questions (FAQ)</h1>
+
+  <div class="faq-section">
+    <div class="faq-question" data-answer="faq1">What is Digital Books?</div>
+    <div class="faq-question" data-answer="faq2">How can I read a book online?</div>
+    <div class="faq-question" data-answer="faq3">Is there a subscription fee?</div>
+    <div class="faq-question" data-answer="faq4">Can I access books offline?</div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="faqModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <script>
+    // FAQ data with questions and answers
+    const faqAnswers = {
+      faq1: "Digital Books is an online platform offering a wide variety of eBooks across genres that can be read directly through your browser.",
+      faq2: "To read a book online, simply navigate to the book's page and click 'Read Now'. The book will open in your browser without needing to download anything.",
+      faq3: "No, most of our books are free to read online, but there are premium books that require a subscription to access.",
+      faq4: "No, books are currently only available for online reading. Offline access is not supported."
+    };
+
+    // Get the modal and other DOM elements
+    const modal = document.getElementById("faqModal");
+    const modalText = document.getElementById("modalText");
+    const closeModal = document.getElementsByClassName("close")[0];
+
+    // Add click event to each FAQ question
+    document.querySelectorAll(".faq-question").forEach(item => {
+      item.addEventListener("click", function () {
+        const answerKey = this.getAttribute("data-answer");
+        modalText.textContent = faqAnswers[answerKey];  // Display the answer
+        modal.style.display = "flex";  // Show the modal
+      });
+    });
+
+    // Close the modal when the 'x' is clicked
+    closeModal.onclick = function() {
+      modal.style.display = "none";
+    };
+
+    // Close the modal if user clicks anywhere outside the modal content
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>

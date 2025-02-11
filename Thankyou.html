@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <style>
+          
+            /* Style for the video */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video covers the screen */
+  z-index: -1; /* Sends the video to the background */
+  opacity: 0.5; /* Adjust the opacity as needed */
+}
+
+/* Container for the text */
+.thank-you-page {
+  position: relative;
+  z-index: 1; /* Ensures content is on top of the video */
+  color: white; /* Text color for visibility over the video */
+}
+
+.thank-you-card {
+  background: rgba(9, 9, 9, 0.773); /* Semi-transparent background for better text readability */
+  padding: 20px;
+  border-radius: 10px;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.btn-custom {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+}
+
+.btn-custom:hover {
+  background-color: #ff3d30;
+}
+        </style>
+    </head>
+  <body>
+        <header>
+            <!-- place navbar here -->
+        </header>
+        <main>
+<!-- Video Background -->
+<video autoplay muted loop id="bg-video">
+    <source src="Library B-Roll Sequence.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  
+  <div class="container-fluid thank-you-page">
+    <div class="row justify-content-center align-items-center vh-100 text-center">
+      <div class="col-md-8 thank-you-card">
+        <h1 class="display-3 mb-4 animate-title">Thank You for Visiting!</h1>
+        <p class="lead mb-4">Thank you for being with us! Continue your reading journey and explore more of our collection.</p>
+        <a href="books.php" class="btn btn-custom btn-lg" id="exploreMoreBtn">Explore More</a>
+      </div>
+    </div>
+  </div>
+
+        </main>
+        <footer>
+            <!-- place footer here -->
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
